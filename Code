@@ -1,0 +1,18 @@
+                    Dim myMSXML
+                    Set myMSXML = CreateObject("Microsoft.XmlHttp")
+                    myMSXML.open "POST", "https://api.bederr.com/v5/sendredeem/", False
+                    myMSXML.setRequestHeader "Content-Type", "application/json"
+                    myMSXML.setRequestHeader "API-KEY", "5003f88d-9915-4453-881d-9fd47e620cd5" 'Grau                    
+                    myMSXML.send (TxtParaEnviar)                
+                    Dim TxtDeRespuesta As String                
+                    TxtDeRespuesta = myMSXML.responseText     
+                    
+                    
+                    
+                    El txt de respuesta es:
+                    {"detail":"Podría haber ganado 200 puntos si estuviera registrado en la aplicación de beneficios APP PETROPERU."}
+                    
+                    
+                    
+                    El Json es:
+                    {"document_type": "TAX_ID","document_number": "10455516108","amount": 827.4,"program": "69Jqwk","place": "kLdAzk","description": "GAS 90","extra": {"type": "GAS","uid": "02"}}
